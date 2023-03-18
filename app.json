@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "habit",
-    "slug": "habit",
+    "name": "habit_ts",
+    "slug": "habit_ts",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
