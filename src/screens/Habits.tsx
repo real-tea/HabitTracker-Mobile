@@ -56,7 +56,23 @@ export function Habit(){
 
 
     const handleToggleHabit = async(habitId : string) => {
-        
+        try{
+            await api.patch(`/habits/${habitId}/toggle`)
+
+            if(completedHabits.includes(habitId))
+            {
+                setCompletedHabits(prevState=>prevState.filter(id=>id!==habitId))
+            }else{
+                setCompletedHabits(prevState=>[...prevState, habitId])
+            }
+        }catch(error){
+            console.log(error);
+            Alert.alert("oops " , "not possible to update the habit status");
+        }
     }
+
+    useEffect(()=>{
+        fetchHabits()
+    },[]);
 
 }
