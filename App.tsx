@@ -10,7 +10,7 @@ import {
 
 //A day.ts file for tracking days of month
 
-//Loading component
+import { Loading } from './src/components/Loading';
 //Routes
 
 export default function App() {
@@ -24,7 +24,8 @@ export default function App() {
 
   if(!fontsLoaded){
     return(
-      <div>Fonts Loaded</div> //loading component goes here
+      <Loading/>
+      // <div>Fonts Loaded</div> //loading component goes here
     )
   }
 
