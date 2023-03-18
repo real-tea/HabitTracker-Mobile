@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const { Navigator , Screen } = createNativeStackNavigator();
 
-export function appRoute(){
+export function AppRoute(){
     return(
         <Navigator>
             <Screen name = "Home"/>
