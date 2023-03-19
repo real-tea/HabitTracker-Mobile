@@ -3,8 +3,13 @@ import clsx from "clsx";
 import dayjs from "dayjs";
 import { useEffect , useState } from 'react';
 import { ScrollView , View , Text , Alert } from 'react-native';
+import { Loading } from "../components/Loading";
 // import { BackButton }
 
+
+import { api } from "../lib/axios";
+
+import { generateProgressPercentage } from "../utils/generate-progress-percentage"; 
 
 interface DayInfoProps { 
     completedHabits : string[],
@@ -74,5 +79,19 @@ export function Habit(){
     useEffect(()=>{
         fetchHabits()
     },[]);
+
+
+    if(isLoading) return <Loading/>
+
+
+    return(
+        <View className="flex-1 bg-background px-8 pt-16">
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom : 100 }}>
+                            
+            </ScrollView>
+        </View>
+    )
 
 }
