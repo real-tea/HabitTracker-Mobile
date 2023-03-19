@@ -94,9 +94,16 @@ export function Habit(){
                 contentContainerStyle={{ paddingBottom : 100 }}>
                <BackButton/>
 
-               <Text className="mt-6">
-
+               <Text className="mt-6 text-zinc-400 font-semibold text-base lowercase">
+                {dayOfWeek}
                </Text>
+
+               <Text className="text-white font-extrabold text-3xl">
+                {dayAndMount}
+               </Text>
+
+                
+               
 
             </ScrollView>
         </View>
