@@ -4,7 +4,10 @@ import dayjs from "dayjs";
 import { useEffect , useState } from 'react';
 import { ScrollView , View , Text , Alert } from 'react-native';
 import { Loading } from "../components/Loading";
-// import { BackButton }
+
+
+
+import { BackButton } from "../components/BackButton";
 
 
 import { api } from "../lib/axios";
@@ -89,7 +92,12 @@ export function Habit(){
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom : 100 }}>
-                            
+               <BackButton/>
+
+               <Text className="mt-6">
+
+               </Text>
+
             </ScrollView>
         </View>
     )
