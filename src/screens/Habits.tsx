@@ -103,6 +103,8 @@ export function Habit(){
                 {dayAndMount}
                </Text>
 
+
+                <ProgressBar/>
                 
                
 
