@@ -6,9 +6,9 @@ import { ScrollView , View , Text , Alert } from 'react-native';
 import { Loading } from "../components/Loading";
 
 import { ProgressBar } from "../components/ProgressBar";
-
+import { Checkbox } from "../components/Checkbox";
 import { BackButton } from "../components/BackButton";
-
+import { HabitsEmpty } from "../components/HabitsEmpty";
 
 import { api } from "../lib/axios";
 
@@ -114,11 +114,26 @@ export function Habit(){
                 {
                     dayInfo?.possibleHabits?
                         dayInfo.possibleHabits.map(habit=>(
-                            
+                            <Checkbox
+                            key = {habit.id}
+                            title = {habit.title}
+                            onPress = {()=>handleToggleHabit(habit.id)}
+                            checked={completedHabits.includes(habit.id)}
+                            disabled={isDateInPast} />
                         ))
+                        : 
+                        <HabitsEmpty/>
                 }
                 </View>
                
+
+               {
+                isDateInPast && (
+                    <Text>
+                        
+                    </Text>
+                )
+               }
 
             </ScrollView>
         </View>

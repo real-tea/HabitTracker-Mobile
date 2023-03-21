@@ -18,9 +18,31 @@ export function Checkbox  ({ checked = false , title , ...rest  }: CheckboxProps
         {...rest}
         >
             {
-                checked ? 
+                checked 
+                ?
+                <Animated.View
+                entering = {ZoomIn}
+                exiting = {ZoomOut}
+
+                className="h-8 w-8 bg-green-500 rounded-lg items-center justify-center">
+
+                    <Feather
+                    name="check"
+                    color = {colors.white}
+                    size = {20}/>
+
+                </Animated.View> 
+                :
+                <View className="h=8 w-8 bg-zinc-900 rounded-lg"/>
+               
+                
 
             }
+
+            <Text className="text-white text-base ml-3 font-semibold">
+                {title}
+
+            </Text>
 
     </TouchableOpacity>
   )
