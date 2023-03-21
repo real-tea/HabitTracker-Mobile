@@ -5,7 +5,7 @@ import { useEffect , useState } from 'react';
 import { ScrollView , View , Text , Alert } from 'react-native';
 import { Loading } from "../components/Loading";
 
-
+import { ProgressBar } from "../components/ProgressBar";
 
 import { BackButton } from "../components/BackButton";
 
@@ -41,7 +41,7 @@ export function Habit(){
     const dayOfWeek  = parsedDate.format('dddd');
     const dayAndMount = parsedDate.format("DD/MM")
 
-    const habitProgress = dayInfo?.completedHabits.length || completedHabits.length > 0
+    const habitsProgress = dayInfo?.completedHabits.length || completedHabits.length > 0
     ? generateProgressPercentage(dayInfo!.possibleHabits.length , completedHabits.length)
     : 0;
     //create a generateProgressPercentage utils 
@@ -104,8 +104,20 @@ export function Habit(){
                </Text>
 
 
-                <ProgressBar/>
-                
+                <ProgressBar progress = { habitsProgress } />
+
+                <View
+                className={clsx("mt-6",{
+                    'opacity-50' : isDateInPast
+                })}> 
+
+                {
+                    dayInfo?.possibleHabits?
+                        dayInfo.possibleHabits.map(habit=>(
+                            
+                        ))
+                }
+                </View>
                
 
             </ScrollView>
