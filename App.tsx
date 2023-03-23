@@ -9,8 +9,10 @@ import {
 } from "@expo-google-fonts/inter";
 
 //A day.ts file for tracking days of month
+import './src/lib/dayjs.ts';
 
 import { Loading } from './src/components/Loading';
+import { Routes } from './src/routes';
 //Routes
 
 export default function App() {
@@ -32,18 +34,9 @@ export default function App() {
   //check expo google fonts for more
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+    <Routes/>
+    <StatusBar style="light" translucent/>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
