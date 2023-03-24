@@ -114,10 +114,12 @@ export function Habit(){
                 {
                     dayInfo?.possibleHabits?
                         dayInfo.possibleHabits.map(habit=>(
+                            
                             <Checkbox
                             key = {habit.id}
                             title = {habit.title}
-                            onPress = {()=>handleToggleHabit(habit.id)}
+                            // @ts-ignore
+                            onPress={()=>handleToggleHabit(habit.id)}
                             checked={completedHabits.includes(habit.id)}
                             disabled={isDateInPast} />
                         ))
