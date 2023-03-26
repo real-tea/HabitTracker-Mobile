@@ -6,7 +6,7 @@ import { AppRoute } from "./app.routes";
 
 export function Routes(){
     return(
-        <View>
+        <View className="flex-1 bg-background">
             <NavigationContainer>
                 <AppRoute/>
             </NavigationContainer>
