@@ -10,3 +10,6 @@ A Mobile app in the productivity genre that helps you track your habits
 - [ ] Calendar , Habit APIs
 - [ ] database collections for users
 - [ ] Prisma Schema Implementation
+
+
+  [![HitCount](https://hits.dwyl.com/real-tea/HabitTracker-Mobile.svg?style=flat)](http://hits.dwyl.com/real-tea/HabitTracker-Mobile)
